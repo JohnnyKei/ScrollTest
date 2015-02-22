@@ -18,21 +18,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         for index in 1...10{
-            items.addObject("item\(index)")
+//            items.addObject("item\(index)")
+            items.addObjectsFromArray(["image1","image2","image3"])
         }
         
         
+        var navigationBarHeight = self.navigationController?.navigationBar.frame.size.height
+        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
+        let marginHeight = navigationBarHeight! + statusBarHeight
         
         var bottomImageView = UIImageView(frame: CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50))
         bottomImageView.backgroundColor = UIColor.blackColor()
         self.view.addSubview(bottomImageView)
         
         var rect = self.view.frame
-        rect.size.height -= 50
+        rect.origin.y = marginHeight
+        rect.size.height -= (50 + marginHeight)
         photoTableView = UITableView(frame: rect, style: UITableViewStyle.Plain)
         photoTableView.delegate = self
         photoTableView.dataSource = self
-        photoTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        photoTableView.registerClass(FullImageTableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(photoTableView)
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,10 +50,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as FullImageTableViewCell
         
-        cell.textLabel?.text = items[indexPath.row] as? String
-        
+//        cell.textLabel?.text = items[indexPath.row] as? String
+        cell.imageView?.image = UIImage(named:items[indexPath.row] as String)
         return cell
     }
     
@@ -67,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         println("\(scrollView.contentOffset)")
         var indexPath :NSIndexPath?
-        if scrollView.contentOffset.y == 0 {
+        if scrollView.contentOffset.y <= 0 {
             indexPath = photoTableView.indexPathForRowAtPoint(CGPointMake(0, 0))
             photoTableView.scrollToRowAtIndexPath(indexPath!, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
         }else{

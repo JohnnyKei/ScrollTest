@@ -13,6 +13,10 @@
 		AAC0836C1A97914F00162AF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC0836B1A97914F00162AF2 /* Images.xcassets */; };
 		AAC0836F1A97914F00162AF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0836D1A97914F00162AF2 /* LaunchScreen.xib */; };
 		AAC0837B1A97914F00162AF2 /* ScrollTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0837A1A97914F00162AF2 /* ScrollTestTests.swift */; };
+		AAD1080E1A9A01F700FD9057 /* FullImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1080D1A9A01F700FD9057 /* FullImageTableViewCell.swift */; };
+		AAD108101A9A035300FD9057 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD1080F1A9A035300FD9057 /* image1.png */; };
+		AAD108121A9A035E00FD9057 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD108111A9A035E00FD9057 /* image2.png */; };
+		AAD108141A9A036700FD9057 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD108131A9A036700FD9057 /* image3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		AAC083741A97914F00162AF2 /* ScrollTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC083791A97914F00162AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC0837A1A97914F00162AF2 /* ScrollTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTestTests.swift; sourceTree = "<group>"; };
+		AAD1080D1A9A01F700FD9057 /* FullImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageTableViewCell.swift; sourceTree = "<group>"; };
+		AAD1080F1A9A035300FD9057 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		AAD108111A9A035E00FD9057 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		AAD108131A9A036700FD9057 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 			children = (
 				AAC083641A97914F00162AF2 /* AppDelegate.swift */,
 				AAC083661A97914F00162AF2 /* ViewController.swift */,
+				AAD1080D1A9A01F700FD9057 /* FullImageTableViewCell.swift */,
+				AAD1080F1A9A035300FD9057 /* image1.png */,
+				AAD108111A9A035E00FD9057 /* image2.png */,
+				AAD108131A9A036700FD9057 /* image3.png */,
 				AAC083681A97914F00162AF2 /* Main.storyboard */,
 				AAC0836B1A97914F00162AF2 /* Images.xcassets */,
 				AAC0836D1A97914F00162AF2 /* LaunchScreen.xib */,
@@ -193,6 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC0836A1A97914F00162AF2 /* Main.storyboard in Resources */,
+				AAD108141A9A036700FD9057 /* image3.png in Resources */,
+				AAD108121A9A035E00FD9057 /* image2.png in Resources */,
+				AAD108101A9A035300FD9057 /* image1.png in Resources */,
 				AAC0836F1A97914F00162AF2 /* LaunchScreen.xib in Resources */,
 				AAC0836C1A97914F00162AF2 /* Images.xcassets in Resources */,
 			);
@@ -214,6 +229,7 @@
 			files = (
 				AAC083671A97914F00162AF2 /* ViewController.swift in Sources */,
 				AAC083651A97914F00162AF2 /* AppDelegate.swift in Sources */,
+				AAD1080E1A9A01F700FD9057 /* FullImageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				AAC083801A97914F00162AF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAC083811A97914F00162AF2 /* Build configuration list for PBXNativeTarget "ScrollTestTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				AAC083831A97914F00162AF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
